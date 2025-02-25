@@ -5,7 +5,7 @@ from pathlib import Path
 import torch
 import argparse
 import os.path as osp
-from mmcv import Config
+from mmcv import Config # type: ignore
 
 ROOT = str(Path(__file__).resolve().parents[2])
 sys.path.append(ROOT)
@@ -15,9 +15,9 @@ from trademaster.nets.builder import build_net
 from trademaster.environments.builder import build_environment
 from trademaster.datasets.builder import build_dataset
 from trademaster.agents.builder import build_agent
-from trademaster.optimizers.builder import build_optimizer
+from trademaster.optimizers.builder import build_optimizer # type: ignore
 from trademaster.losses.builder import build_loss
-from trademaster.trainers.builder import build_trainer
+from trademaster.trainers.builder import build_trainer # type: ignore
 from trademaster.transition.builder import build_transition
 from trademaster.utils import set_seed
 
